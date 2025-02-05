@@ -299,10 +299,7 @@
         <p>
           In declarativeNetRequest, the user can only redirect to a single instance that is hard-coded in the Rules
           Table.
-          In order to change this instance, you should go to the settings page and change it manually. You can't change
-          it in the "background". This may be solved by duplicating the same rule with a different instance, see <a
-            href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest#matching_precedence">Matching
-            precedence</a>.
+          In order to change this instance, you need to update the Rules Table. You can't change it in the "background".
         </p>
       </li>
       <li>Sending a separate HTTP request to get some information before redirecting to the new URL:
@@ -312,8 +309,8 @@
           separate HTTP request to <a href="https://nominatim.openstreetmap.org">nominatim.openstreetmap.org</a> to get
           the lat,
           lon for that address. In
-          declarativeNetRequest, there's no "code" that can be executed to make a separate HTTP request. It's just a "Rule" in a
-          table.
+          declarativeNetRequest, there's no "code" that can be executed to make a separate HTTP request. It's just a
+          "Rule" in a table.
         </p>
       </li>
     </ol>
