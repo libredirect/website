@@ -1,4 +1,10 @@
 Windows Registry Editor Version 5.00
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Google\Chrome\ExtensionInstallAllowlist]
+
 "1"="oladmjdebphlnjjcnomfhhbfdldiimaf"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Google\Chrome\ExtensionInstallSources]
+
+"2"="https://github.com/*"
+"3"="https://objects.githubusercontent.com/*"
