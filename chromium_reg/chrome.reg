@@ -6,5 +6,6 @@ Windows Registry Editor Version 5.00
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Google\Chrome\ExtensionInstallSources]
 
-"2"="https://github.com/*"
+"2"="https://github.com/libredirect/browser_extension/*"
 "3"="https://objects.githubusercontent.com/*"
+
