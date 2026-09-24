@@ -151,6 +151,10 @@ a {
   color: #ffd65b;
 }
 
+.active {
+  color: #ffd65b;
+}
+
 a.fedi {
   color: #121212;
 }
