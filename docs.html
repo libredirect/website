@@ -1,114 +1,214 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="robots" content="index, follow">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="icon" type="image/x-icon" href="img/icon.svg">
-  <link rel="canonical" href="https://libredirect.manerakai.com">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="LibRedirect – Privacy-friendly Redirector">
-  <meta property="og:site_name" content="libredirect.manerakai.com">
-  <meta property="og:description"
-    content="A web extension that redirects YouTube, Twitter, Instagram, etc. requests to alternative privacy-friendly frontends">
-  <title>Docs</title>
-  <meta name="referrer" content="same-origin">
-  <meta http-equiv="Content-Security-Policy"
-    content=" default-src 'none' base-uri 'self' script-src 'none' form-action 'none' frame-ancestors 'none' ">
-</head>
-
-<body>
-  <div id="body">
-    <div id="logo"><img src="img/icon.svg" width="160" height="160" alt="LibRedirect icon">
-      <h1>LibRedirect</h1>
-    </div>
-    <div class="nav_bar">
-      <a href="./index.html">Home</a>
-      <a href="./download.html">Download</a>
-      <a href="./source_code.html">Source Code</a>
-      <a href="./contact.html">Contact</a>
-      <a href="./faq.html">FAQ</a>
-      <a href="./docs.html" style="font-weight: bold;">Docs</a>
-      <a href="./donate.html">Donate</a>
-    </div>
-    <h2>Documentation</h2>
-    <h3 id="Keyboard_Shortcuts"><a href="#Keyboard_Shortcuts">Keyboard shortcuts</a></h3>
-    <p>LibRedirect offers the following keyboard shortcuts for easier access:</p>
-    <ul>
-      <li>
-        <code>Shift+Alt+L</code> – To switch to a different instance from the one you're currently in.
-      </li>
-      <li>
-        <code>Shift+Alt+C</code> – Copies the original link – e.g. copies the original Twitter link
-        when you're using <a href="https://github.com/zedeus/nitter">Nitter</a>.
-      </li>
-      <li>
-        <code>Shift+Alt+O</code> – Redirects to the original site from the frontend.
-      </li>
-      <li>
-        <code>Shift+Alt+R</code> – Redirects to the frontend from the original site.
-      </li>
-    </ul>
-    <p>Some shortcuts may or may not work in certain browsers such as Microsoft Edge.</p>
-
-    <h3 id="preferred"><a href="#preferred">Preferred instances</a></h3>
-    <p>To go from the current instance you're using to your preferred or favourite instance, it is explained as follows.
-      For example, assume someone shares with you a <a href="https://github.com/TeamPiped/Piped">Piped</a> link for the
-      instance
-      <a href="https://piped.mha.fi">piped.mha.fi</a>, but you want to use your favourite instance,
-      <a href="https://piped.video">piped.video</a>, the official instance. It would be a hassle to change the domain
-      manually,
-      especially if you've been sent multiple links.
-    </p>
-    <p>To avoid that hassle, you can redirect to your favourite instance with just two clicks! Just open the
-      popup menu and click the reload button near the frontend (in this case, YouTube). Voila! You have reached your
-      destination.</p>
-
-    <p>Below is a small demo of this feature. Please note that switching to your favourite instance by clicking the
-      reload button
-      works regardless of whether redirection for that frontend is turned off or on.</p>
-    <video src="./vids/preferred_instances.webm" type="video/webm" controls></video>
-
-    <p><strong>Note:</strong> Some frontends may not have this feature, but the most popular ones do. We
-      will try to expand this functionality if feasible.</p>
-
-    <h3 id="exceptions"><a href="#exceptions">Exceptions</a></h3>
-    <div><img class="align" src="img/docs/exceptions.webp" alt="Image of Exceptions settings"></div>
-    <p>Exceptions will exclude certain sites from being redirected.
-      When you add a site to the exceptions list, it will not redirect as it is excluded from redirection.</p>
-    <p>This exceptions list is an allowlist, <em>not</em> a blocklist.</p>
-
-    <h3 id="instances"><a href="#instances">Cloudflare</a></h3>
-    <p>You might see some instances marked with <span class="color-c">Cloudflare</span>.</p>
-    <p>
-      <span class="color-c">Cloudflare</span> indicates that an instance is using Cloudflare as its CDN.
-      Cloudflare basically decrypts the data between you and the instance to compress it and send it faster;
-      in other words, Cloudflare can see your data in plain text, even with HTTPS, so use these instances carefully.
-    </p>
-
-    <h3 id="search_engine_chromium"><a href="#search_engine_chromium">Setting LibRedirect as a search engine in
-        Chromium</a></h3>
-    <p>Type in your address bar: <span class="yellow">chrome://settings/searchEngines</span>. Under
-      <span class="yellow">Site search</span>,
-      click <span class="yellow">Add</span> and type:
-      <br>
-      <strong>Search engine:</strong> LibRedirect<br>
-      <strong>Shortcut:</strong> libredirect<br>
-      <strong>URL with %s in place of query:</strong> http://search.libredirect.invalid/?q=%s
-    </p>
-    <video src="./vids/chrome_default_seach_engine.webm" type="video/webm" controls></video>
-
-    <h3 id="search_engine_firefox_android"><a href="#search_engine_firefox_android">Setting LibRedirect as a search
-        engine in
-        Firefox Android</a></h3>
-    <p>Go to Settings => Search => Default search engine => Add search engine:<br>
-      <strong>Search engine name:</strong> LibRedirect<br>
-      <strong>Search string URL:</strong> http://libredirect.manerakai.com/?q=%s
-    </p>
-    <br><br><br>
-  </div>
-</body>
-
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="robots" content="index, follow">
+		<link rel="stylesheet" href="style.css">
+		<link rel="icon" type="image/x-icon" href="favicon.ico">
+		<link rel="canonical" href="https://libredirect.manerakai.com">
+		<meta property="og:type" content="website">
+		<meta property="og:title" content="LibRedirect - Privacy-friendly Redirector">
+		<meta property="og:site_name" content="libredirect.manerakai.com">
+		<meta property="og:description" content="A web extension that redirects YouTube, Twitter, Instagram, etc. requests to alternative privacy-friendly frontends">
+		<title>LibRedirect - Documentation</title>
+		<meta name="referrer" content="same-origin">
+		<meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'self'; form-action 'self'; script-src 'none'; style-src 'self' 'unsafe-inline'; img-src 'self'; font-src 'self'; frame-src 'self'; media-src 'self';">
+	</head>
+	<body>
+		<div id="body">
+			<div id="logo">
+				<a href="./index.html">
+					<img src="assets/images/libredirect.svg" width="160" height="160" alt="LibRedirect icon">
+					<h1>LibRedirect</h1>
+				</a>
+			</div>
+			<div class="nav_bar">
+				<a href="./index.html">Home</a>
+				<a href="./docs.html" style="font-weight: bold;">Documentation</a>
+				<a href="./donate.html">Support LibRedirect ❤️</a>
+			</div>
+			<h2 id="faq">Frequently Asked Questions</h2>
+			<h3 id="why_libredirect"><a href="#why_libredirect">Why LibRedirect?</a></h3>
+			<p>Normally, you would watch YouTube videos through <a href="https://www.youtube.com">youtube.com</a>,
+				problem is, everything you watch is tied to your Google Account. Even if you don't use an account, your IP address is still visible to their server.
+				Even if you use <a href="https://www.torproject.org">Tor</a>, you still have <a href="https://en.wikipedia.org/wiki/JavaScript">JavaScript</a>
+				enabled, which can gather all sorts of creepy information about your browser and system - just go to <a href="https://deviceinfo.me">deviceinfo.me</a>
+				or <a href="https://www.amiunique.org">amiunique.org</a>
+				and see for yourself!<br></p>
+			<p>So, why not disable JavaScript? Great idea! Now YouTube is broken, as it requires JavaScript to function?</p>
+			<p>Fortunately, there's a way to make a script that scrapes data off of <a href="https://www.youtube.com/">youtube.com</a>
+				and presents it in a nice simple webpage that doesn't require JavaScript. People have done this already! There's a project called <a href="https://github.com/iv-org/invidious">Invidious</a>
+				that doesn't require JavaScript for you to watch YouTube videos - e.g. <a href="https://yewtu.be/watch?v=dQw4w9WgXcQ">https://yewtu.be/watch?v=dQw4w9WgXcQ</a>.</p>
+			<p>Invidious and others are called alternative <span class="yellow">frontends</span>,
+				where you're still using YouTube (or another website) but with a different interface, in this case a more privacy-friendly one.<br></p>
+			<p>Changing links every time from e.g.<br>
+				<a href="https://youtube.com/watch?v=dQw4w9WgXcQ">https://youtube.com/watch?v=dQw4w9WgXcQ</a>
+				<span>&#8594;</span>
+				<a href="https://yewtu.be/watch?v=dQw4w9WgXcQ">https://yewtu.be/watch?v=dQw4w9WgXcQ</a><br>
+				is an inconvenient process and best to be automated, so we did that!<br></p>
+			<p>LibRedirect's main functionality is to make the use of those frontends easier by automating it. It makes life much easier and privacy more convenient.</p>
+			<h3 id="suggest_frontend"><a href="#suggest_frontend">Suggest a frontend</a></h3>
+			<p><strong>Requirements:</strong></p>
+			<ol><li>Open source</li><li>Enhances privacy over main site</li><li>Can be self-hosted, so it's decentralised</li></ol>
+			<p><strong>Good examples:</strong></p>
+			<ul>
+				<li><a href="https://github.com/iv-org/invidious" class="green">Invidious</a></li>
+				<li><a href="https://github.com/redlib-org/redlib" class="green">Redlib</a></li>
+				<li><a href="https://simple-web.org/projects/simplytranslate.html" class="green">SimplyTranslate</a></li>
+			</ul>
+			<p><strong>Bad examples:</strong></p>
+			<ul>
+				<li><a href="https://pixiv.moe" class="red">PixivMoe</a>
+				- Wasn't meant to be an alternative private frontend in the first place.</li>
+				<li><a href="https://imginn.com" class="red">Imginn</a>
+				- Wasn't meant to be an alternative private frontend in the first place.</li>
+				<li><a href="https://www.startpage.com" class="red">Startpage</a>
+				- There's already an <a href="https://addons.mozilla.org/en-US/firefox/addon/startpage-private-search">extension</a>
+				for it.</li>
+				<li><a href="https://old.reddit.com" class="red">Old Reddit</a>
+				- There's already an <a href="https://addons.mozilla.org/en-US/firefox/addon/old-reddit-redirect">extension</a>
+				for it.</li>
+				<li><a href="https://pinafore.social" class="red">Pinafore</a>
+				- A full featured web app for <a href="https://joinmastodon.org/">Mastodon</a>, not a frontend.</li>
+				<li><a href="https://playsoju.netlify.app/" class="red">Soju</a>
+				- A website that gives you samples of Spotify songs, not a frontend.</li>
+				<li>PornInvidious - <a href="https://codeberg.org/LibRedirect/browser_extension/issues/11#issuecomment-630922">See discussion</a>.</li>
+			</ul>
+			<h3 id="why_fork_privacy_redirect"><a href="#why_fork_privacy_redirect">Why fork Privacy Redirect?</a></h3>
+			<p><a href="https://github.com/SimonBrazell/privacy-redirect">Privacy Redirect</a>
+			hasn't been maintained since 6 December 2021. Many instances are hard-coded.
+			Some should be removed as they've since gone offline and many others should be added. Many pull requests were left pending and waiting, so we stepped in.
+			Later, we started improving it further by adding new features and frontends.</p>
+			<p>Even though we forked from Privacy Redirect, LibRedirect is now independent,
+				as it is ahead of the main project with several improvements and new features.</p>
+			<h3 id="why_all_those_permissions"><a href="#why_all_those_permissions">Why all those permissions?</a></h3>
+			<p>Let's examine them one by one:</p>
+			<ul>
+				<li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest">webRequest</a>, <code>webRequestBlocking</code>: To block <code>http</code>
+				requests or redirect them.</li>
+				<li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage">storage</a>: To save LibRedirect's settings permanently.</li>
+				<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Clipboard/writeText">Clipboard.writeText</a>:
+				To write the original link to the clipboard while using Copy Raw. LibRedirect does <em>not</em>
+				read the data in your clipboard.</li>
+				<li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/menus">menus</a>: To add LibRedirect buttons to the Context Menus.</li>
+				<li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/bookmarks">bookmarks</a>
+				(optional): To add the same Context Menus to Bookmarks too.</li>
+				<li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns">all_urls</a>: The targets can be static,
+				but the Switch Instance and Copy Raw buttons require access to the instances' URLs which are custom to each user.</li>
+			</ul>
+			<h3 id="where_the_hell_are_those_instances_coming_from"><a href="#where_the_hell_are_those_instances_coming_from">Where the hell are those instances coming from?</a></h3>
+			<p>Almost every frontend project has a list of public instances. We fetch those lists using an automated <a href="https://github.com/libredirect/instances">Python script</a>,
+				which gets triggered daily. We neither intercept nor modify the lists outside of removing invalid URLs.</p>
+			<p>Hence, if you are not comfortable with certain instances' policies or have found malicious instances, please report them to the project maintainers to remove them from their lists.
+				We will then update our lists manually to make sure those instances are removed, only after you contact us via our <a href="https://matrix.to/#/#libredirect:matrix.org">Matrix room</a>
+				or by <a href="https://fosstodon.org/@libredirect">Mastodon</a>.</p>
+			<h3 id="embeds"><a href="#embeds">Embeds aren't working, why?</a></h3>
+			<ul>
+				<li>The Webpage you are trying to use may have implemented CSP (<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP">Content Security Policy</a>) which prevents Libredirect from replacing them.</li>
+				<li>It could be broken because of Top layer in HTML element of the embed that maybe a Custom Video Player or Ads.</li>
+				<li>Some instances doesn't support embeds at all or displaced them explicitly.</li>
+			</ul>
+			<p>They are disabled by default to not help website in creating a fingerprint on you.</p>
+			<h3 id="chrome_web_store"><a href="#chrome_web_store">Chrome Web Store?</a></h3>
+			<p>We can't publish LibRedirect to the Chrome Web Store as it requires Manifest v3, which removed essential features that LibRedirect needs. However, you can still <a href="#chromium-install">install it manually</a>.</p>
+			<h3 id="mv3"><a href="#mv3">Why can't LibRedirect migrate to Manifest V3?</a></h3>
+			<p>There are two ways to redirect URLs: <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest">webRequest</a>
+				(Manifest V2) and <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest">declarativeNetRequest</a>
+				(Manifest V3). According to <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest#comparison_with_the_webrequest_api">mdn</a>,
+				declarativeNetRequest evaluates network requests in the browser itself, making it more performant, but it lacks flexibility.</p>
+			<p>There are two places where webRequest works and declarativeNetRequest doesn't:</p>
+			<ol>
+				<li>Selecting a random instance from a set of favorite instances for each new HTTP request. In declarativeNetRequest,
+					the user can only redirect to a single instance that is hard-coded in the Rules Table.</li>
+				<li>Sending a separate HTTP request to get some information before redirecting to the new URL (e.g., getting lat/lon from Nominatim when redirecting from Google Maps).
+					In declarativeNetRequest, there's no "code" that can be executed to make a separate HTTP request.</li>
+			</ol>
+			<h2 id="privacy-policy">Privacy Policy</h2>
+			<ul>
+				<li>Data collected : Nothing.</li>
+				<li>All URL redirections work locally, except for OpenStreetMap reverse geocoding, done via the <a href="https://nominatim.org/release-docs/develop/api/Overview">OSM Nomantim API</a>.</li>
+				<li>By default, the list of instances is fetched from GitHub. Alternatively, it may be fetched from Codeberg or not at all.</li>
+			</ul>
+			<h2 id="documentation">Documentation</h2>
+			<h3 id="keyboard-shortcuts"><a href="#keyboard-shortcuts">Keyboard shortcuts</a></h3>
+			<p>LibRedirect offers the following keyboard shortcuts for easier access:</p>
+			<ul>
+				<li><strong>Shift+Alt+L</strong>
+				- To switch to a different instance from the one you're currently in.</li>
+				<li><strong>Shift+Alt+C</strong>
+				- Copies the original link (e.g., copies the original Twitter link when you're using <a href="https://github.com/zedeus/nitter">Nitter</a>).</li>
+				<li><strong>Shift+Alt+O</strong>
+				- Redirects to the original site from the frontend.</li>
+				<li><strong>Shift+Alt+R</strong>
+				- Redirects to the frontend from the original site.</li>
+			</ul>
+			<p>Some shortcuts may or may not work in certain browsers such as Microsoft Edge.</p>
+			<h3 id="preferred"><a href="#preferred">Preferred instances</a></h3>
+			<p>To go from the current instance you're using to your preferred or favourite instance, it is explained as follows. For example, assume someone shares with you a <a href="https://github.com/TeamPiped/Piped">Piped</a>
+				link for the instance <a href="https://piped.mha.fi">piped.mha.fi</a>, but you want to use your favourite instance, <a href="https://piped.video">piped.video</a>. It would be a hassle to change the domain manually.</p>
+			<p>To avoid that hassle, you can redirect to your favourite instance with just two clicks! Just open the popup menu and click the reload button near the frontend. Voila! You have reached your destination.</p>
+			<p><strong>Note:</strong>
+			Switching to your favourite instance by clicking the reload button works regardless of whether redirection for that frontend is turned off or on.</p>
+			<video src="./assets/videos/preferred_instances.webm" controls></video>
+			<p><strong>Note:</strong>
+			Some frontends may not have this feature, but the most popular ones do.</p>
+			<h3 id="exceptions"><a href="#exceptions">Exceptions</a></h3>
+			<div><img class="align" src="assets/images/exceptions.webp" alt="Image of Exceptions settings"></div>
+			<p>Exceptions will exclude certain sites from being redirected. When you add a site to the exceptions list, it will not redirect as it is excluded from redirection. This exceptions list is an allowlist, <em>not</em>
+				a blocklist.</p>
+			<h3 id="instances"><a href="#instances">Cloudflare</a></h3>
+			<!-- TODO: see https://codeberg.org/LibRedirect/website/pulls/36#issuecomment-24543720 -->
+			<p>You might see some instances marked with <span class="color-c">Cloudflare</span>.
+				This indicates that an instance is using Cloudflare as its CDN.
+				Cloudflare basically decrypts the data between you and the instance to compress it and send it faster.
+				in other words, Cloudflare can see your data in plain text, even with HTTPS, so use these instances carefully.</p>
+			<h3 id="search_engine_chromium"><a href="#search_engine_chromium">Setting LibRedirect as a search engine in Chromium</a></h3>
+			<p>Type in your address bar: <span class="yellow">chrome://settings/searchEngines</span>. Under <span class="yellow">Site search</span>, click <span class="yellow">Add</span>
+				and type:<br>
+				<strong>Search engine:</strong>
+				LibRedirect<br>
+				<strong>Shortcut:</strong>
+				libredirect<br>
+				<strong>URL with %s in place of query:</strong>
+				https://search.libredirect.invalid/?q=%s</p>
+			<video src="./assets/videos/chrome_default_search_engine.webm" controls></video>
+			<h3 id="search_engine_firefox_android"><a href="#search_engine_firefox_android">Setting LibRedirect as a search engine in Firefox Android</a></h3>
+			<p>Go to Settings => Search => Default search engine => Add search engine:<br>
+				<strong>Search engine name:</strong>
+				LibRedirect<br>
+				<strong>Search string URL:</strong>
+				https://libredirect.manerakai.com/?q=%s</p>
+			<h2 id="chromium-install">Install for Chromium browsers</h2>
+			<p>Applies to <a href="https://www.google.com/chrome">Chrome</a>, <a href="https://brave.com">Brave</a>, <a href="https://www.microsoft.com/en-us/edge">Edge</a>, <a href="https://vivaldi.com">Vivaldi</a>, <a href="https://www.opera.com">Opera</a>.</p>
+			<h3 id="windows"><a href="#windows">Windows</a></h3>
+			<p>1. Go to <span class="yellow">Extension Manager</span>, and enable <span class="yellow">developer mode</span>.</p>
+			<p>2. Download and run your browser's registry file: <a href="./assets/reg/chrome.reg" download>chrome.reg</a>, <a href="./assets/reg/brave.reg" download>brave.reg</a>, <a href="./assets/reg/edge.reg" download>edge.reg</a>
+				or <a href="./assets/reg/vivaldi.reg" download>vivaldi.reg</a>.<br>
+				<strong>Note:</strong>
+				Opera doesn't need a registry file.</p>
+			<p>3. Restart your browser.</p>
+			<p>4. Right click on this <span class="yellow">.crx</span>
+				file, and click <span class="yellow">Save Link As...</span>
+				to save it: <a href="https://github.com/libredirect/browser_extension/releases/download/v3.4.0/libredirect-3.4.0.crx">libredirect-3.4.0.crx</a>.</p>
+			<p>5. Go to <span class="yellow">Extension Manager</span>
+				again, and drag and drop the <span class="yellow">.crx</span>
+				file.</p>
+			<video src="./assets/videos/install_chromium.webm" controls></video>
+			<h3 id="mac"><a href="#mac">macOS</a></h3>
+			<p>1. Download the latest zip file <a href="https://github.com/libredirect/browser_extension/releases/download/v3.4.0/libredirect-3.4.0.zip">libredirect-3.4.0.zip</a>.</p>
+			<p>2. Unzip it with <span class="yellow">Auto detect subfolder</span>.</p>
+			<p>3. Go to <span class="yellow">Extension Manager</span>, and enable <span class="yellow">developer mode</span>.</p>
+			<p>4. Click <span class="yellow">Load unpacked</span>, and select and open <span class="yellow">libredirect-3.4.0/src/</span>.</p>
+			<video src="./assets/videos/install_chrome_load_unpacked.webm" controls></video>
+			<h3 id="linux"><a href="#linux">Linux, ChromeOS</a></h3>
+			<p>1. Right click on this <span class="yellow">.crx</span>
+				file, and click <span class="yellow">Save Link As...</span>
+				to save it: <a href="https://github.com/libredirect/browser_extension/releases/download/v3.4.0/libredirect-3.4.0.crx">libredirect-3.4.0.crx</a>.</p>
+			<p>2. Go to <span class="yellow">Extension Manager</span>, and enable <span class="yellow">developer mode</span>.</p>
+			<p>3. Refresh the page.</p>
+			<p>4. Drag and drop the <span class="yellow">.crx</span>
+				file.</p>
+		</div>
+	</body>
 </html>

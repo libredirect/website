@@ -1,307 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="robots" content="index, follow">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="icon" type="image/x-icon" href="img/icon.svg">
-  <link rel="canonical" href="https://libredirect.manerakai.com">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="LibRedirect - Privacy-friendly Redirector">
-  <meta property="og:site_name" content="libredirect.manerakai.com">
-  <meta property="og:description"
-    content="A web extension that redirects YouTube, Twitter, Instagram, etc. requests to alternative privacy-friendly frontends">
-  <title>LibRedirect</title>
-  <meta name="referrer" content="same-origin">
-  <meta http-equiv="Content-Security-Policy"
-    content=" default-src 'none' base-uri 'self' script-src 'none' form-action 'none' frame-ancestors 'none' ">
-</head>
-
-<body>
-  <div id="body">
-    <div id="logo"> <img src="img/icon.svg" width="160" height="160" alt="LibRedirect icon">
-      <h1>LibRedirect</h1>
-    </div>
-    <div class="nav_bar">
-      <a href="./index.html" style="font-weight: bold;">Home</a>
-      <a href="./download.html">Download</a>
-      <a href="./source_code.html">Source Code</a>
-      <a href="./contact.html">Contact</a>
-      <a href="./faq.html">FAQ</a>
-      <a href="./docs.html">Docs</a>
-      <a href="./donate.html">Donate</a>
-    </div>
-    <h3 class="title">A web extension that redirects YouTube, Instagram, Reddit, TikTok and other websites to
-      alternative
-      privacy-friendly frontends.</h3>
-    <div id="description">
-      <div>
-        <ul class="clear">
-          <li>
-            YouTube <span>&#8594;</span>
-            <a href="https://invidious.io/">Invidious</a>,
-            <a href="https://materialio.us/">Materialious</a>,
-            <a href="https://github.com/TeamPiped/Piped">Piped</a>,
-            <a href="https://github.com/mmjee/Piped-Material">Piped-Material</a>,
-            <a href="https://codeberg.org/ashley/poke">Poke</a>,
-            <a href="https://sr.ht/~cadence/tube">CloudTube</a>,
-            <a href="https://github.com/lighttube-org/LightTube">LightTube</a>,
-            <a href="https://github.com/migalmoreno/tubo">Tubo</a>,
-            <a href="https://github.com/FreeTubeApp/FreeTube">FreeTube</a>,
-            <a href="https://github.com/yattee/yattee">Yattee</a>,
-            <a href="https://github.com/MarmadileManteater/FreeTubeCordova">FreeTube PWA</a>,
-            <a href="https://github.com/ViewTube/viewtube">ViewTube</a>,
-            <a href="https://github.com/n-ce/ytify/">ytify</a>
-          </li>
-          <li>
-            YT Music <span>&#8594;</span>
-            <a href="https://github.com/n-ce/ytify/">ytify</a>,
-            <a href="https://codeberg.org/Hyperpipe/Hyperpipe">Hyperpipe</a>,
-            <a href="https://invidious.io/">Invidious</a>,
-            <a href="https://github.com/FreeTubeApp/FreeTube">FreeTube</a>
-          </li>
-          <li>
-            Twitter <span>&#8594;</span>
-            <a href="https://github.com/zedeus/nitter">Nitter</a>
-          </li>
-          <li>
-            ChatGPT <span>&#8594;</span>
-            <a href="https://duckduckgo.com/duckduckgo-help-pages/aichat/">DuckDuckGo AI Chat</a>,
-            <a href="https://lumo.proton.me/">Lumo by Proton</a>
-          </li>
-          <li>
-            Bluesky <span>&#8594;</span>
-            <a href="https://github.com/badlogic/skyview">Skyview</a>,
-            <a href="https://codeberg.org/bg443/skylib-backend">Skylib</a>
-          </li>
-          <li>
-            Reddit <span>&#8594;</span>
-            <a href="https://github.com/spikecodes/libreddit">Libreddit</a>,
-            <a href="https://github.com/redlib-org/redlib">Redlib</a>,
-            <a href="https://codeberg.org/teddit/teddit">Teddit</a>,
-            <a href="https://github.com/corenting/eddrit">Eddrit</a>,
-            <a href="https://github.com/burhan-syed/troddit">Troddit</a>
-          </li>
-          <li>
-            Tumblr <span>&#8594;</span>
-            <a href="https://github.com/syeopite/priviblur">Priviblur</a>
-          </li>
-          <li>
-            Twitch <span>&#8594;</span>
-            <a href="https://codeberg.org/dragongoose/safetwitch">SafeTwitch</a>,
-            <a href="https://codeberg.org/CloudyyUw/twineo">Twineo</a>
-          </li>
-          <li>
-            TikTok <span>&#8594;</span>
-            <a href="https://github.com/pablouser1/ProxiTok">ProxiTok</a>,
-            <a href="https://github.com/MarsHeer/offtiktok">Offtiktok</a>
-          </li>
-          <li>
-            Instagram <span>&#8594;</span>
-            <a href="https://codeberg.org/irelephant/kittygram">kittygram</a>,
-            <a href="https://codeberg.org/ThePenguinDev/Proxigram">Proxigram</a>
-          </li>
-          <li>
-            IMDb <span>&#8594;</span>
-            <a href="https://github.com/zyachel/libremdb">libremdb</a>
-          </li>
-          <li>
-            Bilibili <span>&#8594;</span>
-            <a href="https://0xacab.org/johnxina/mikuinvidious">MikuInvidious</a>
-          </li>
-          <li>
-            Pixiv <span>&#8594;</span>
-            <a href="https://codeberg.org/VnPower/pixivfe">PixivFE</a>,
-            <a href="https://codeberg.org/LiteXiv/LiteXiv">LiteXiv</a>,
-            <a href="https://codeberg.org/vixipy/Vixipy">Vixipy</a>,
-            <a href="https://github.com/asadahimeka/pixiv-viewer">Pixiv Viewer</a>
-          </li>
-          <li>
-            Fandom <span>&#8594;</span>
-            <a href="https://breezewiki.com">BreezeWiki</a>,
-            <a href="https://codeberg.org/phantom-org/phantom">Phantom</a>
-          </li>
-          <li>
-            Imgur <span>&#8594;</span>
-            <a href="https://codeberg.org/video-prize-ranch/rimgo">rimgo</a>
-          </li>
-          <li>
-            Pinterest <span>&#8594;</span>
-            <a href="https://github.com/Ahwxorg/Binternet">Binternet</a>,
-            <a href="https://codeberg.org/thirtysix/painterest">Painterest</a>
-          </li>
-          <li>
-            SoundCloud <span>&#8594;</span>
-            <a href="https://github.com/migalmoreno/tubo">Tubo</a>,
-            <a href="https://git.maid.zone/stuff/soundcloak">soundcloak</a>
-          </li>
-          <li>
-            Bandcamp <span>&#8594;</span>
-            <a href="https://forgejo.sny.sh/sun/Tent">Tent</a>
-          </li>
-          <li>
-            Tekstowo.pl <span>&#8594;</span>
-            <a href="https://github.com/Davilarek/TekstoLibre">TekstoLibre</a>
-          </li>
-          <li>
-            Genius <span>&#8594;</span>
-            <a href="https://github.com/rramiachraf/dumb">Dumb</a>,
-            <a href="https://github.com/Insprill/intellectual">Intellectual</a>
-          </li>
-          <li>
-            Medium <span>&#8594;</span>
-            <a href="https://sr.ht/~edwardloveall/Scribe">Scribe</a>,
-            <a href="https://github.com/realaravinth/libmedium">LibMedium</a>,
-            <a href="https://git.private.coffee/PrivateCoffee/small">Small</a>,
-            <a href="https://codeberg.org/Freedium-cfd">Freedium</a>
-          </li>
-          <li>
-            Quora <span>&#8594;</span>
-            <a href="https://github.com/zyachel/quetre">Quetre</a>
-          </li>
-          <li>
-            GitHub <span>&#8594;</span>
-            <a href="https://codeberg.org/gothub/gothub">Gothub</a>
-          </li>
-          <li>
-            GitLab <span>&#8594;</span>
-            <a href="https://git.vitali64.duckdns.org/utils/laboratory.git/about/">Laboratory</a>
-          </li>
-          <li>
-            Stack Overflow <span>&#8594;</span>
-            <a href="https://github.com/httpjamesm/AnonymousOverflow">AnonymousOverflow</a>
-          </li>
-          <li>
-            Reuters <span>&#8594;</span>
-            <a href="https://github.com/HookedBehemoth/neuters">Neuters</a>
-          </li>
-          <li>
-            Snopes <span>&#8594;</span>
-            <a href="https://git.vern.cc/cobra/Suds">Suds</a>
-          </li>
-          <li>
-            iFunny <span>&#8594;</span>
-            <a href="https://git.vern.cc/cobra/UNfunny">UNfunny</a>
-          </li>
-          <li>
-            Tenor <span>&#8594;</span>
-            <a href="https://git.vern.cc/cobra/Soprano">Soprano</a>
-          </li>
-          <li>
-            KnowYourMeme <span>&#8594;</span>
-            <a href="https://git.vern.cc/cobra/MeMe">MeMe</a>
-          </li>
-          <li>
-            Urban Dictionary <span>&#8594;</span>
-            <a href="https://codeberg.org/cobra/rural-dict">Rural Dictionary</a>
-          </li>
-          <li>
-            Goodreads <span>&#8594;</span>
-            <a href="https://github.com/nesaku/BiblioReads">BiblioReads</a>
-          </li>
-          <li>
-            Wolfram Alpha <span>&#8594;</span>
-            <a href="https://git.disroot.org/wolfree">WolfreeAlpha</a>
-          </li>
-          <li>
-            Instructables <span>&#8594;</span>
-            <a href="https://github.com/PrivateCoffee/structables">Structables</a>,
-            <a href="https://git.vern.cc/cobra/Destructables">Destructables</a>,
-            <a href="https://indestructables.codeberg.page">Indestructables</a>
-          </li>
-          <li>
-            Wikipedia <span>&#8594;</span>
-            <a href="https://wikiless.org">Wikiless</a>,
-            <a href="https://git.private.coffee/privatecoffee/wikimore">Wikimore</a>
-          </li>
-          <li>
-            Wayback Machine <span>&#8594;</span>
-            <a href="https://github.com/ticky/wayback-classic">Wayback Classic</a>
-          </li>
-          <li>
-            Pastebin <span>&#8594;</span>
-            <a href="https://github.com/Dragynfruit/pasted">Pasted</a>
-          </li>
-          <li>
-            Search <span>&#8594;</span>
-            <a href="https://github.com/searxng/searxng">SearXNG</a>,
-            <a href="https://searx.github.io/searx/">SearX</a>,
-            <a href="https://benbusby.com/projects/whoogle-search/">Whoogle</a>,
-            <a href="https://github.com/Ahwxorg/librey/">LibreY</a>,
-            <a href="https://git.lolcat.ca/lolcat/4get">4get</a>,
-            <a href="https://github.com/neon-mmd/websurfx">Websurfx</a>
-          </li>
-          <li>
-            Translate <span>&#8594;</span>
-            <a href="https://codeberg.org/ManeraKai/simplytranslate">SimplyTranslate</a>,
-            <a href="https://codeberg.org/aryak/mozhi">Mozhi</a>,
-            <a href="https://github.com/LibreTranslate/LibreTranslate">LibreTranslate</a>,
-            <a href="https://codeberg.org/gospodin/translite">Translite</a>
-          </li>
-          <li>
-            Maps <span>&#8594;</span>
-            <a href="https://www.openstreetmap.org/">OpenStreetMap</a>
-          </li>
-          <li>
-            Meet <span>&#8594;</span>
-            <a href="https://jitsi.org">Jitsi</a>
-          </li>
-          <li>
-            Send Files <span>&#8594;</span>
-            <a href="https://gitlab.com/timvisee/send">Send</a>
-          </li>
-          <li>
-            Paste Text <span>&#8594;</span>
-            <a href="https://privatebin.info">PrivateBin</a>,
-            <a href="https://github.com/Dragynfruit/pasted">Pasted</a>,
-            <a href="https://github.com/lus/pasty">Pasty</a>
-          </li>
-          <li>
-            Office <span>&#8594;</span>
-            <a href="https://cryptpad.org">CryptPad</a>
-          </li>
-          <li>
-            Ultimate Guitar <span>&#8594;</span>
-            <a href="https://github.com/kmille/freetar">Freetar</a>,
-            <a href="https://github.com/BenoitBellegarde/UltimateTab">Ultimate Tab</a>
-          </li>
-          <li>
-            Baidu Tieba <span>&#8594;</span>
-            <a href="https://0xacab.org/johnxina/rat">Rat Aint Tieba</a>
-          </li>
-          <li>
-            Threads <span>&#8594;</span>
-            <a href="https://git.sr.ht/~nixgoat/shoelace">Shoelace</a>
-          </li>
-          <li>
-            DeviantArt <span>&#8594;</span>
-            <a href="https://codeberg.org/skunky/skunkyart">SkunkyArt</a>
-          </li>
-          <li>
-            GeeksforGeeks <span>&#8594;</span>
-            <a href="https://git.vern.cc/cobra/NerdsforNerds">NerdsforNerds</a>,
-            <a href="https://git.private.coffee/PrivateCoffee/ducksforducks">Ducks for Ducks</a>
-          </li>
-          <li>
-            Coub <span>&#8594;</span>
-            <a href="https://codeberg.org/gospodin/koub">Koub</a>
-          </li>
-          <li>
-            Chefkoch <span>&#8594;</span>
-            <a href="https://github.com/NoUmlautsAllowed/gocook">GoCook</a>
-          </li>
-        </ul>
-      </div>
-      <div id="popup">
-        <embed type="text/html" src="./popup.html">
-      </div>
-    </div>
-
-    <a class="fedi" rel="me" href="https://fosstodon.org/@libredirect">Mastodon</a>
-    <br><br>
-  </div>
-</body>
-
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="robots" content="index, follow">
+		<link rel="stylesheet" href="style.css">
+		<link rel="icon" type="image/x-icon" href="favicon.ico">
+		<link rel="canonical" href="https://libredirect.manerakai.com">
+		<meta property="og:type" content="website">
+		<meta property="og:title" content="LibRedirect - Privacy-friendly Redirector">
+		<meta property="og:site_name" content="libredirect.manerakai.com">
+		<meta property="og:description" content="A web extension that redirects YouTube, Twitter, Instagram, etc. requests to alternative privacy-friendly frontends">
+		<title>LibRedirect</title>
+		<meta name="referrer" content="same-origin">
+		<meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'self'; form-action 'self'; script-src 'none'; style-src 'self' 'unsafe-inline'; img-src 'self'; font-src 'self'; frame-src 'self'; media-src 'self';">
+	</head>
+	<body>
+		<div id="body" class="center-content">
+			<div id="logo">
+				<a href="./index.html">
+					<img src="assets/images/libredirect.svg" width="160" height="160" alt="LibRedirect icon">
+					<h1>LibRedirect</h1>
+				</a>
+			</div>
+			<div class="nav_bar">
+				<a href="./index.html" style="font-weight: bold;">Home</a>
+				<a href="./docs.html">Documentation</a>
+				<a href="./donate.html">Support LibRedirect ❤️</a>
+			</div>
+			<h3 class="title">A web extension that redirects YouTube, Instagram, Reddit, TikTok and other websites to alternative privacy-friendly frontends.</h3>
+			<div>
+				<a class="badge" href="https://addons.mozilla.org/firefox/addon/libredirect">
+					<img src="./assets/images/badge-firefox.svg" alt="Firefox Add-Ons">
+				</a>
+				<a class="badge" href="#chromium-install">
+					<img src="./assets/images/badge-chromium.webp" alt="Chromium">
+				</a>
+				<a class="badge" href="https://github.com/libredirect">
+					<img src="./assets/images/github.svg" alt="GitHub">
+				</a>
+				<a class="badge" href="https://codeberg.org/LibRedirect">
+					<img src="./assets/images/codeberg.svg" alt="Codeberg">
+				</a>
+				<p><strong>Note:</strong>
+				LibRedirect is available on Firefox for Android.</p>
+			</div>
+			<h2>Connect with us</h2>
+			<div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 5px 15px;">
+				<strong>Matrix room:</strong>
+				<a href="https://matrix.to/#/#libredirect:matrix.org">libredirect:matrix.org</a>
+				<strong>|</strong>
+				<strong>Fediverse:</strong>
+				<a href="https://fosstodon.org/@libredirect">libredirect@fosstodon.org</a>
+				<strong>|</strong>
+				<strong>Email:</strong>
+				<a href="mailto:libredirect@protonmail.com">libredirect@protonmail.com</a>
+			</div>
+			<div id="description">
+				<div class="left-content">
+					<!-- To sync service list see 'index.sh' script. TODO: make CI or update script to replace this part. -->
+					<ul class="clear">
+						<li>Baidu Tieba <span>&#8594;</span>
+							<a href="https://0xacab.org/johnxina/rat">Rat Aint Tieba</a></li>
+						<li>Bandcamp <span>&#8594;</span>
+							<a href="https://forgejo.sny.sh/sun/Tent">Tent</a></li>
+						<li>BiliBili <span>&#8594;</span>
+							<a href="https://0xacab.org/johnxina/mikuinvidious">MikuInvidious</a></li>
+						<li>Bluesky <span>&#8594;</span>
+							<a href="https://github.com/badlogic/skyview">Skyview</a>, <a href="https://codeberg.org/bg443/skylib-backend">Skylib</a></li>
+						<li>ChatGPT <span>&#8594;</span>
+							<a href="https://duckduckgo.com/duckduckgo-help-pages/aichat">DuckDuckGo AI Chat</a>, <a href="https://lumo.proton.me">Lumo by Proton</a></li>
+						<li>Chefkoch <span>&#8594;</span>
+							<a href="https://github.com/NoUmlautsAllowed/gocook">GoCook</a></li>
+						<li>Coub <span>&#8594;</span>
+							<a href="https://git.bloat.cat/gospodin/koub">Koub</a></li>
+						<li>DeviantArt <span>&#8594;</span>
+							<a href="https://codeberg.org/skunky/skunkyart">SkunkyArt</a></li>
+						<li>Fandom <span>&#8594;</span>
+							<a href="https://breezewiki.com">BreezeWiki</a>, <a href="https://codeberg.org/phantom-org/phantom">Phantom</a></li>
+						<li>Gelbooru <span>&#8594;</span>
+							<a href="https://codeberg.org/vlnst/gelbooru-go">Gelbooru-Go</a>, <a href="https://codeberg.org/jessienyan/booruview">BooruView</a></li>
+						<li>GeeksforGeeks <span>&#8594;</span>
+							<a href="https://git.vern.cc/cobra/NerdsforNerds">NerdsforNerds</a>, <a href="https://git.private.coffee/PrivateCoffee/ducksforducks">DucksforDucks</a></li>
+						<li>Genius <span>&#8594;</span>
+							<a href="https://github.com/rramiachraf/dumb">Dumb</a>, <a href="https://github.com/Insprill/intellectual">Intellectual</a></li>
+						<li>GitHub <span>&#8594;</span>
+							<a href="https://codeberg.org/gothub/gothub">GotHub</a></li>
+						<li>GitLab <span>&#8594;</span>
+							<a href="https://git.vitali64.duckdns.org/utils/laboratory.git/about">Laboratory</a></li>
+						<li>Goodreads <span>&#8594;</span>
+							<a href="https://github.com/nesaku/BiblioReads">BiblioReads</a></li>
+						<li>Google Lens <span>&#8594;</span>
+							<a href="https://git.maid.zone/stuff/rens">Rens</a></li>
+						<li>Google Maps <span>&#8594;</span>
+							<a href="https://www.openstreetmap.org">OpenStreetMap</a></li>
+						<li>IMDb <span>&#8594;</span>
+							<a href="https://github.com/zyachel/libremdb">libremdb</a></li>
+						<li>Imgur <span>&#8594;</span>
+							<a href="https://codeberg.org/rimgo/rimgo">rimgo</a></li>
+						<li>Instagram <span>&#8594;</span>
+							<a href="https://codeberg.org/irelephant/kittygram">Kittygram</a>, <a href="https://codeberg.org/ThePenguinDev/Proxigram">Proxigram</a></li>
+						<li>Instructables <span>&#8594;</span>
+							<a href="https://github.com/PrivateCoffee/structables">Structables</a>, <a href="https://git.vern.cc/cobra/Destructables">Destructables</a>, <a href="https://indestructables.codeberg.page">Indestructables</a></li>
+						<li>iFunny <span>&#8594;</span>
+							<a href="https://git.vern.cc/cobra/UNfunny">UNfunny</a></li>
+						<li>KnowYourMeme <span>&#8594;</span>
+							<a href="https://git.vern.cc/cobra/MeMe">MeMe</a></li>
+						<li>Medium <span>&#8594;</span>
+							<a href="https://sr.ht/~edwardloveall/Scribe">Scribe</a>, <a href="https://github.com/realaravinth/libmedium">LibMedium</a>, <a href="https://git.private.coffee/PrivateCoffee/small">Small</a>, <a href="https://codeberg.org/Freedium-cfd">Freedium</a></li>
+						<li>Meet <span>&#8594;</span>
+							<a href="https://jitsi.org">Jitsi</a></li>
+						<li>Office <span>&#8594;</span>
+							<a href="https://cryptpad.org">CryptPad</a></li>
+						<li>Paste Text <span>&#8594;</span>
+							<a href="https://privatebin.info">PrivateBin</a>, <a href="https://github.com/Dragynfruit/pasted">Pasted</a>, <a href="https://github.com/lus/pasty">Pasty</a></li>
+						<li>Pastebin <span>&#8594;</span>
+							<a href="https://github.com/Dragynfruit/pasted">Pasted</a></li>
+						<li>Pinterest <span>&#8594;</span>
+							<a href="https://github.com/Ahwxorg/Binternet">Binternet</a>, <a href="https://codeberg.org/thirtysix/painterest">Painterest</a>, <a href="https://github.com/bunk-im/pinless">Pinless</a></li>
+						<li>Pixiv <span>&#8594;</span>
+							<a href="https://codeberg.org/VnPower/pixivfe">PixivFE</a>, <a href="https://codeberg.org/LiteXiv/LiteXiv">LiteXiv</a>, <a href="https://codeberg.org/vixipy/Vixipy">Vixipy</a>, <a href="https://github.com/asadahimeka/pixiv-viewer">Pixiv Viewer</a></li>
+						<li>Quora <span>&#8594;</span>
+							<a href="https://github.com/zyachel/quetre">Quetre</a></li>
+						<li>Reddit <span>&#8594;</span>
+							<a href="https://github.com/redlib-org/redlib">Redlib</a>, <a href="https://github.com/corenting/eddrit">Eddrit</a>, <a href="https://github.com/burhan-syed/troddit">Troddit</a>, <a href="https://codeberg.org/teddit/teddit">Teddit</a>, <a href="https://github.com/spikecodes/libreddit">Libreddit</a></li>
+						<li>Reuters <span>&#8594;</span>
+							<a href="https://github.com/HookedBehemoth/neuters">Neuters</a></li>
+						<li>Search <span>&#8594;</span>
+							<a href="https://github.com/searxng/searxng">SearXNG</a>, <a href="https://searx.github.io/searx">SearX</a>, <a href="https://benbusby.com/projects/whoogle-search">Whoogle</a>, <a href="https://github.com/Ahwxorg/librey/">LibreY</a>, <a href="https://git.lolcat.ca/lolcat/4get">4get</a>, <a href="https://github.com/neon-mmd/websurfx">Websurfx</a>, <a href="https://github.com/degoog-org/degoog">Degoog</a></li>
+						<li>Send Files <span>&#8594;</span>
+							<a href="https://gitlab.com/timvisee/send">Send</a></li>
+						<li>Snopes <span>&#8594;</span>
+							<a href="https://git.vern.cc/cobra/Suds">Suds</a></li>
+						<li>SoundCloud <span>&#8594;</span>
+							<a href="https://github.com/migalmoreno/tubo">Tubo</a>, <a href="https://git.maid.zone/stuff/soundcloak">soundcloak</a></li>
+						<li>Stack Overflow <span>&#8594;</span>
+							<a href="https://github.com/httpjamesm/AnonymousOverflow">AnonymousOverflow</a></li>
+						<li>Tekstowo.pl <span>&#8594;</span>
+							<a href="https://github.com/Davilarek/TekstoLibre">TekstoLibre</a></li>
+						<li>Tenor <span>&#8594;</span>
+							<a href="https://git.vern.cc/cobra/Soprano">Soprano</a>, <a href="https://gitfield.org/fsky/mezzo">Mezzo</a></li>
+						<li>Threads <span>&#8594;</span>
+							<a href="https://git.sr.ht/~nixgoat/shoelace">Shoelace</a></li>
+						<li>TikTok <span>&#8594;</span>
+							<a href="https://github.com/pablouser1/ProxiTok">ProxiTok</a>, <a href="https://github.com/MarsHeer/offtiktok">Offtiktok</a></li>
+						<li>Translate <span>&#8594;</span>
+							<a href="https://codeberg.org/ManeraKai/simplytranslate">SimplyTranslate</a>, <a href="https://codeberg.org/aryak/mozhi">Mozhi</a>, <a href="https://github.com/LibreTranslate/LibreTranslate">LibreTranslate</a>, <a href="https://codeberg.org/gospodin/translite">Translite</a></li>
+						<li>Tumblr <span>&#8594;</span>
+							<a href="https://github.com/syeopite/priviblur">Priviblur</a></li>
+						<li>Twitch <span>&#8594;</span>
+							<a href="https://codeberg.org/dragongoose/safetwitch">SafeTwitch</a>, <a href="https://codeberg.org/CloudyyUw/twineo">Twineo</a></li>
+						<li>Ultimate Guitar <span>&#8594;</span>
+							<a href="https://github.com/kmille/freetar">Freetar</a>, <a href="https://github.com/BenoitBellegarde/UltimateTab">Ultimate Tab</a></li>
+						<li>Urban Dictionary <span>&#8594;</span>
+							<a href="https://codeberg.org/cobra/rural-dict">Rural Dictionary</a></li>
+						<li>Wayback Machine <span>&#8594;</span>
+							<a href="https://github.com/ticky/wayback-classic">Wayback Classic</a></li>
+						<li>Wikipedia <span>&#8594;</span>
+							<a href="https://wikiless.org">Wikiless</a>, <a href="https://git.private.coffee/privatecoffee/wikimore">Wikimore</a>, <a href="https://codeberg.org/bnyro/wikiviewer">WikiViewer</a></li>
+						<li>Wolfram Alpha <span>&#8594;</span>
+							<a href="https://git.disroot.org/wolfree">WolfreeAlpha</a></li>
+						<li>X (Twitter) <span>&#8594;</span>
+							<a href="https://github.com/zedeus/nitter">Nitter</a>, <a href="https://github.com/zedeus/nitter">Shitter</a></li>
+						<li>YouTube <span>&#8594;</span>
+							<a href="https://invidious.io">Invidious</a>, <a href="https://materialio.us">Materialious</a>, <a href="https://github.com/TeamPiped/Piped">Piped</a>, <a href="https://github.com/mmjee/Piped-Material">Piped-Material</a>, <a href="https://codeberg.org/ashley/poke">Poke</a>, <a href="https://sr.ht/~cadence/tube">CloudTube</a>, <a href="https://github.com/lighttube-org/LightTube">LightTube</a>, <a href="https://github.com/migalmoreno/tubo">Tubo</a>, <a href="https://github.com/FreeTubeApp/FreeTube">FreeTube</a>, <a href="https://github.com/OpenTubeX/OpenTubeX">OpenTubeX</a>, <a href="https://github.com/yattee/yattee">Yattee</a>, <a href="https://github.com/MarmadileManteater/FreeTubeAndroid">FreeTube Android</a>, <a href="https://github.com/ViewTube/viewtube">ViewTube</a>, <a href="https://github.com/n-ce/ytify/">ytify</a></li>
+						<li>YouTube Music <span>&#8594;</span>
+							<a href="https://github.com/n-ce/ytify">ytify</a>, <a href="https://codeberg.org/Hyperpipe/Hyperpipe">Hyperpipe</a>, <a href="https://invidious.io">Invidious</a>, <a href="https://github.com/FreeTubeApp/FreeTube">FreeTube</a></li>
+					</ul>
+				</div>
+				<div id="popup">
+					<iframe src="./popup.html" title="Popup Emulation of the extension"></iframe>
+				</div>
+			</div>
+			<!-- Hidden. Used to verify this website at Mastodon account. -->
+			<a class="fedi" rel="me" href="https://fosstodon.org/@libredirect" style="display: none;">Mastodon</a>
+		</div>
+	</body>
 </html>

@@ -1,0 +1,11 @@
+[attr]crlf eol=crlf
+*          text=auto eol=lf
+*.ico      binary
+*.png      binary
+*.reg      crlf linguist-detectable
+*.ttf      binary
+*.webm     binary
+*.webp     binary
+*.yaml     linguist-detectable
+*.yml      linguist-language=YAML
+.git*      linguist-language=Shell
