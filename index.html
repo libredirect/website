@@ -13,18 +13,17 @@
 		<meta property="og:description" content="A web extension that redirects YouTube, Twitter, Instagram, etc. requests to alternative privacy-friendly frontends">
 		<title>LibRedirect</title>
 		<meta name="referrer" content="same-origin">
-		<meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'self'; form-action 'self'; script-src 'none'; style-src 'self' 'unsafe-inline'; img-src 'self'; font-src 'self'; frame-src 'self'; media-src 'self';">
+		<meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'self'; form-action 'self'; script-src 'none'; style-src 'self'; img-src 'self'; font-src 'self'; frame-src 'self'; media-src 'self';">
 	</head>
 	<body>
 		<div id="body" class="center-content">
 			<div id="logo">
 				<a href="./index.html">
-					<img src="assets/images/libredirect.svg" width="160" height="160" alt="LibRedirect icon">
-					<h1>LibRedirect</h1>
+					<img src="assets/images/libredirect-logo.svg" alt="LibRedirect Logo">
 				</a>
 			</div>
 			<div class="nav_bar">
-				<a href="./index.html" style="font-weight: bold;">Home</a>
+				<a href="./index.html" class="active">Home</a>
 				<a href="./docs.html">Documentation</a>
 				<a href="./donate.html">Support LibRedirect ❤️</a>
 			</div>
@@ -34,7 +33,7 @@
 					<img src="./assets/images/badge-firefox.svg" alt="Firefox Add-Ons">
 				</a>
 				<a class="badge" href="./docs.html#chromium-install">
-					<img src="./assets/images/badge-chromium.webp" alt="Chromium">
+					<img src="./assets/images/badge-chromium.svg" alt="Chromium">
 				</a>
 				<a class="badge" href="https://github.com/libredirect">
 					<img src="./assets/images/github.svg" alt="GitHub">
@@ -42,11 +41,14 @@
 				<a class="badge" href="https://codeberg.org/LibRedirect">
 					<img src="./assets/images/codeberg.svg" alt="Codeberg">
 				</a>
+				<a class="badge" href="https://hosted.weblate.org/projects/libredirect/extension">
+					<img src="./assets/images/badge-weblate.svg" alt="Weblate">
+				</a>
 				<p><strong>Note:</strong>
 				LibRedirect is available on Firefox for Android.</p>
 			</div>
 			<h2>Connect with us</h2>
-			<div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 5px 15px;">
+			<div class="connect-links">
 				<strong>Matrix room:</strong>
 				<a href="https://matrix.to/#/#libredirect:matrix.org">libredirect:matrix.org</a>
 				<strong>|</strong>

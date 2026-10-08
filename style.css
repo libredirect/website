@@ -75,7 +75,7 @@ body {
 }
 
 #logo img {
-  width: 75px;
+  width: 512px;
   height: auto;
 }
 
@@ -107,9 +107,10 @@ body {
 }
 
 .nav_bar a:hover,
-.nav_bar a[style*="font-weight: bold"] {
+.nav_bar a.active {
   color: var(--active);
   text-decoration: none !important;
+  font-weight: bold;
 }
 
 h2 {
@@ -443,4 +444,16 @@ body.popup input[type="checkbox"]::before {
 
 body.popup input[type="checkbox"]:checked::before {
   left: 24px;
+}
+
+.connect-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 5px 15px;
+}
+
+.donate-spacing {
+  margin: 30px 0;
 }
